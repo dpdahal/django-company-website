@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website.apps.WebsiteConfig',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'website.general.global_data',
             ],
         },
     },
@@ -122,9 +125,30 @@ STATICFILES_DIRS = [
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = BASE_DIR / 'uploads'
-MEDIA_URL = '/uploads/'
+MEDIA_URL = 'uploads/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Techrastra",
+    "site_header": "techrastra",
+    "site_brand": "Techrastra",
+    "site_logo": "logo/logo.webp",
+    "site_logo_classes": "img-circle",
+    "welcome_sign": "Welcome to the Techrastra Admin Panel",
+    "copyright": "Techrastra",
+    "search_model": ["auth.User"],
+    "user_avatar": None,
+    "topmenu_links": [
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+
+       
+    ],
+    
+}

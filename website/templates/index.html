@@ -1,11 +1,565 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello Project</h1>
-</body>
-</html>
+{% extends 'layouts/master.html' %}
+
+{% block content %}
+
+
+<div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-caption">
+                            <span class="hero-tag">Techrastra</span>
+                            <h1 class="hero-title">We’re Web Development
+                                & Digital Marketing Agency in Nepal</h1>
+                            <p class="hero-description">
+                                Transform your business with a Search Engine optimized website with better page speed, and best practices.
+                            </p>
+                            <a href="#" class="hero-btn">
+                                Take Our Services
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <div class="hero-features">
+                                <div class="feature-card">
+                                    <div class="feature-icon guarantee-icon">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Money Back</strong><br>
+                                        <span>Guarantee</span>
+                                    </div>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon secure-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div>
+                                        <strong>100% Secure</strong><br>
+                                        <span>Insurance</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image">
+                            <img src="/api/placeholder/800/600" alt="Family with umbrella">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-caption">
+                            <span class="hero-tag">LIFE INSURANCE</span>
+                            <h1 class="hero-title">Protect Your Family's Future Today</h1>
+                            <p class="hero-description">Secure your family's financial future with our comprehensive
+                                life insurance plans. Get coverage that gives you peace of mind and protection when it
+                                matters most.</p>
+                            <a href="#" class="hero-btn">
+                                Get Protected Now
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <div class="hero-features">
+                                <div class="feature-card">
+                                    <div class="feature-icon guarantee-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Life Coverage</strong><br>
+                                        <span>Protection</span>
+                                    </div>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon secure-icon">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Secure Future</strong><br>
+                                        <span>Guaranteed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image">
+                            <img src="./images/home.png" alt="Family together">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-caption">
+                            <span class="hero-tag">HOME INSURANCE</span>
+                            <h1 class="hero-title">Protect Your Home & Property</h1>
+                            <p class="hero-description">Keep your home and belongings safe with our comprehensive home
+                                insurance coverage. Get protection against natural disasters, theft, and unexpected
+                                damages.</p>
+                            <a href="#" class="hero-btn">
+                                Secure Your Home
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <div class="hero-features">
+                                <div class="feature-card">
+                                    <div class="feature-icon guarantee-icon">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Property</strong><br>
+                                        <span>Protection</span>
+                                    </div>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon secure-icon">
+                                        <i class="fas fa-umbrella"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Full Coverage</strong><br>
+                                        <span>Insurance</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image">
+                            <img src="/api/placeholder/800/600" alt="Home protection">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+<section class="py-5 global-container">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Image Column -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="position-relative">
+                    <img src="./images/home.png" alt="Family with insurance" class="img-fluid rounded-4 shadow">
+                    <div class="position-absolute bottom-0 start-0 translate-middle-y">
+                        <img src="/api/placeholder/200/150" alt="Happy family" class="img-fluid rounded-3 shadow-lg"
+                             style="max-width: 200px;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Column -->
+            <div class="col-lg-6">
+                <div class="ps-lg-4">
+                    <span class="text-danger fw-semibold mb-2 d-block">ABOUT OUR INSURANCE</span>
+                    <h2 class="display-6 fw-bold text-navy mb-4">We'll Ensure You Always Get the Best Guidance</h2>
+
+                    <p class="text-muted mb-4">Insurance is a means of protection from financial loss in which exchange
+                        for a fee, a party agrees to guarantee compensation in the event of specified loss, damage,
+                        illness, or death.</p>
+
+                    <!-- Features List -->
+                    <div class="mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-success p-2 rounded-circle me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"
+                                     class="bi bi-wallet2" viewBox="0 0 16 16">
+                                    <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                                </svg>
+                            </div>
+                            <h5 class="mb-0">Protect and save your money</h5>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-success p-2 rounded-circle me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"
+                                     class="bi bi-file-text" viewBox="0 0 16 16">
+                                    <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z"/>
+                                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                                </svg>
+                            </div>
+                            <h5 class="mb-0">Get quotes from top insurers instantly</h5>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <div class="bg-success p-2 rounded-circle me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"
+                                     class="bi bi-check-lg" viewBox="0 0 16 16">
+                                    <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                                </svg>
+                            </div>
+                            <h5 class="mb-0">Promise Timeline Guarantee</h5>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-lg px-4">
+                        Discover More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-navy text-white py-5">
+    <div class="container py-5">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <h6 class="text-danger mb-3 text-uppercase">What we offer</h6>
+            <h2 class="display-5 fw-bold mb-3">Explore Our Wide Range of<br>Insurance Services</h2>
+            <p class="text-white-50 mb-5">Insurance means of protection from financial loss which exchange party<br>agrees
+                guarantee another party</p>
+        </div>
+
+        <!-- Services Cards -->
+        <div class="row g-4 mb-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card p-4 h-100">
+                    <div class="icon-box mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                        </svg>
+                    </div>
+                    <h5 class="text-dark mb-3">Life Insurance</h5>
+                    <p class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur. Orci arcu nish</p>
+                    <a href="#" class="read-more d-flex align-items-center">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2"
+                             viewBox="0 0 16 16">
+                            <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card p-4 h-100">
+                    <div class="icon-box mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM4.5 7.5a.5.5 0 0 1 0 1H5v.5a.5.5 0 0 1-1 0v-.5h-.5a.5.5 0 0 1 0-1H4v-.5a.5.5 0 0 1 1 0v.5h.5zm4 0a.5.5 0 0 1 0 1H10v.5a.5.5 0 0 1-1 0v-.5h-.5a.5.5 0 0 1 0-1H9v-.5a.5.5 0 0 1 1 0v.5h.5z"/>
+                        </svg>
+                    </div>
+                    <h5 class="text-dark mb-3">Medical Insurance</h5>
+                    <p class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur. Orci arcu nish</p>
+                    <a href="#" class="read-more d-flex align-items-center">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2"
+                             viewBox="0 0 16 16">
+                            <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card p-4 h-100">
+                    <div class="icon-box mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+                            <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276z"/>
+                            <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848Z"/>
+                        </svg>
+                    </div>
+                    <h5 class="text-dark mb-3">Car Insurance</h5>
+                    <p class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur. Orci arcu nish</p>
+                    <a href="#" class="read-more d-flex align-items-center">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2"
+                             viewBox="0 0 16 16">
+                            <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card p-4 h-100">
+                    <div class="icon-box mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+                            <path d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm0 5a1.5 1.5 0 0 1 1.5 1.5A3.5 3.5 0 0 1 12 10a.5.5 0 0 1-1 0 2.5 2.5 0 0 0-2.5-2.5A.5.5 0 0 1 8 7c0-.28.22-.5.5-.5z"/>
+                        </svg>
+                    </div>
+                    <h5 class="text-dark mb-3">Travel Insurance</h5>
+                    <p class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur. Orci arcu nish</p>
+                    <a href="#" class="read-more d-flex align-items-center">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2"
+                             viewBox="0 0 16 16">
+                            <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Click Here Text -->
+        <div class="text-center mb-5">
+            <p class="text-white-50">
+                Do You Want To explore more services just
+                <a href="#" class="text-success text-decoration-none">click here</a>
+            </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-card text-center">
+                    <div class="stats-number mb-2">10k+</div>
+                    <div class="text-white-50">Happy Customer</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-card text-center">
+                    <div class="stats-number mb-2">854</div>
+                    <div class="text-white-50">Skilled Contractors</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-card text-center">
+                    <div class="stats-number mb-2">125</div>
+                    <div class="text-white-50">Awards Achieved</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-card text-center">
+                    <div class="stats-number mb-2">658</div>
+                    <div class="text-white-50">Insurance Policies</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-5">
+    <div class="container py-5">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <h6 class="text-danger text-uppercase mb-3">Expert People</h6>
+            <h2 class="display-5 fw-bold mb-4">Dedicated Team Members</h2>
+            <p class="text-muted mx-auto" style="max-width: 600px;">
+                Insurance is a means of protection from financial loss which innei exchange
+                for a fee, a party agrees to guarantee another party
+            </p>
+        </div>
+
+        <!-- Team Members -->
+        <div class="row g-4">
+            <!-- Team Member 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="/api/placeholder/400/400" alt="Team member"/>
+                        <div class="share-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                 viewBox="0 0 16 16">
+                                <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h4 class="team-title">Jane Cooper</h4>
+                    <p class="team-position mb-0">Life Insurance specialist</p>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="/api/placeholder/400/400" alt="Team member"/>
+                        <div class="share-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                 viewBox="0 0 16 16">
+                                <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h4 class="team-title">Ralph Edwards</h4>
+                    <p class="team-position mb-0">Car Insurance specialist</p>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="/api/placeholder/400/400" alt="Team member"/>
+                        <div class="share-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                 viewBox="0 0 16 16">
+                                <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h4 class="team-title">Darrell Steward</h4>
+                    <p class="team-position mb-0">Car Insurance specialist</p>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="/api/placeholder/400/400" alt="Team member"/>
+                        <div class="share-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                 viewBox="0 0 16 16">
+                                <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h4 class="team-title">Bessie Cooper</h4>
+                    <p class="team-position mb-0">Life Insurance specialist</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="min-vh-100 d-flex align-items-center" style="background: linear-gradient(45deg, #1a1a3c, #2d2d5f);">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <!-- Left Content -->
+            <div class="col-lg-6 text-white">
+                <div class="pe-lg-5">
+                    <h6 class="text-danger mb-3">GET A QUOTE</h6>
+                    <h1 class="display-4 fw-bold mb-4">Compare Quotes And<br>Get Life Insurance.</h1>
+                    <p class="lead opacity-75">Insurance is a means of protection from financial loss in which in
+                        exchange for a fee, a party agrees to guarantee another party compensation in the event of a
+                        certain loss.</p>
+                </div>
+            </div>
+
+            <!-- Right Form -->
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body p-4 p-lg-5">
+                        <form>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Your Name</label>
+                                    <input type="text" class="form-control form-control-lg bg-light border-0"
+                                           placeholder="Name">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Email Address</label>
+                                    <input type="email" class="form-control form-control-lg bg-light border-0"
+                                           placeholder="Email">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Insurance Type</label>
+                                    <select class="form-select form-select-lg bg-light border-0">
+                                        <option value="car">Car Insurance</option>
+                                        <option value="life">Life Insurance</option>
+                                        <option value="health">Health Insurance</option>
+                                        <option value="home">Home Insurance</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">ZIP Code</label>
+                                    <input type="text" class="form-control form-control-lg bg-light border-0"
+                                           placeholder="Code">
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-success btn-lg w-100 text-white"
+                                            style="background-color: #00c389;">
+                                        Get a Quote
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="news-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h6 class="text-danger mb-3">LATEST NEWS & TIPS</h6>
+            <h2 class="display-5 fw-bold text-dark">Resources to keep you informed.</h2>
+        </div>
+
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-lg-4">
+                <div class="news-card">
+                    <img src="/api/placeholder/400/320" alt="Life Insurance" class="news-image">
+                    <span class="category-badge">Life Insurance</span>
+                    <h3 class="h4 mb-3">Income on Maturity of the Money Back Plan</h3>
+                    <p class="text-secondary mb-4">Lorem ipsum dolor sit amet consectetur. Orci arcu nibh imperdiet
+                        dictum volutpat purus lectus urna volutpat. Nisi faucibus nec scelerisque.</p>
+                    <a href="#" class="read-more">
+                        Read More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-4">
+                <div class="news-card">
+                    <img src="/api/placeholder/400/320" alt="Medical Insurance" class="news-image">
+                    <span class="category-badge">Medical Insurance</span>
+                    <h3 class="h4 mb-3">Bonus Amounts Help Increase Payout.</h3>
+                    <p class="text-secondary mb-4">Lorem ipsum dolor sit amet consectetur. Orci arcu nibh imperdiet
+                        dictum volutpat purus lectus urna volutpat. Nisi faucibus nec scelerisque.</p>
+                    <a href="#" class="read-more">
+                        Read More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-4">
+                <div class="news-card">
+                    <img src="/api/placeholder/400/320" alt="Car Insurance" class="news-image">
+                    <span class="category-badge">Car Insurance</span>
+                    <h3 class="h4 mb-3">Beginner's guide to life insurance in USA</h3>
+                    <p class="text-secondary mb-4">Lorem ipsum dolor sit amet consectetur. Orci arcu nibh imperdiet
+                        dictum volutpat purus lectus urna volutpat. Nisi faucibus nec scelerisque.</p>
+                    <a href="#" class="read-more">
+                        Read More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
