@@ -163,7 +163,9 @@
             <!-- Image Column -->
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="position-relative">
-                    <img src="./images/home.png" alt="Family with insurance" class="img-fluid rounded-4 shadow">
+                    {% if aboutUs.image %}
+                    <img src="{{aboutUs.image.url}}" alt="Family with insurance" class="img-fluid rounded-4 shadow">
+                    {% endif %}
                     <div class="position-absolute bottom-0 start-0 translate-middle-y">
                         <img src="/api/placeholder/200/150" alt="Happy family" class="img-fluid rounded-3 shadow-lg"
                              style="max-width: 200px;">
@@ -174,55 +176,24 @@
             <!-- Content Column -->
             <div class="col-lg-6">
                 <div class="ps-lg-4">
-                    <span class="text-danger fw-semibold mb-2 d-block">ABOUT OUR INSURANCE</span>
-                    <h2 class="display-6 fw-bold text-navy mb-4">We'll Ensure You Always Get the Best Guidance</h2>
+                    <h2 class="display-6 fw-bold text-navy mb-4">
+                        {{ aboutUs.title}}
+                    </h2>
 
-                    <p class="text-muted mb-4">Insurance is a means of protection from financial loss in which exchange
-                        for a fee, a party agrees to guarantee compensation in the event of specified loss, damage,
-                        illness, or death.</p>
+                    <p class="text-muted mb-4">
+                        {{ aboutUs.summary}}
+                    </p>
 
-                    <!-- Features List -->
-                    <div class="mb-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-success p-2 rounded-circle me-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"
-                                     class="bi bi-wallet2" viewBox="0 0 16 16">
-                                    <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
-                                </svg>
-                            </div>
-                            <h5 class="mb-0">Protect and save your money</h5>
-                        </div>
+            
 
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-success p-2 rounded-circle me-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"
-                                     class="bi bi-file-text" viewBox="0 0 16 16">
-                                    <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z"/>
-                                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-                                </svg>
-                            </div>
-                            <h5 class="mb-0">Get quotes from top insurers instantly</h5>
-                        </div>
-
-                        <div class="d-flex align-items-center">
-                            <div class="bg-success p-2 rounded-circle me-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"
-                                     class="bi bi-check-lg" viewBox="0 0 16 16">
-                                    <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                                </svg>
-                            </div>
-                            <h5 class="mb-0">Promise Timeline Guarantee</h5>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-primary btn-lg px-4">
+                    <a href="{% url 'about-us' %}" class="btn btn-primary btn-lg px-4">
                         Discover More
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                              class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                   d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                         </svg>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -234,7 +205,7 @@
     <div class="container py-5">
         <!-- Header -->
         <div class="text-center mb-5">
-            <h6 class="text-danger mb-3 text-uppercase">What we offer</h6>
+            <h6 class="text-danger mb-3 text-uppercase">Our Service</h6>
             <h2 class="display-5 fw-bold mb-3">Explore Our Wide Range of<br>Insurance Services</h2>
             <p class="text-white-50 mb-5">Insurance means of protection from financial loss which exchange party<br>agrees
                 guarantee another party</p>
@@ -242,6 +213,7 @@
 
         <!-- Services Cards -->
         <div class="row g-4 mb-5">
+            {% for service in serviceData %}
             <div class="col-lg-3 col-md-6">
                 <div class="service-card p-4 h-100">
                     <div class="icon-box mb-4">
@@ -249,9 +221,13 @@
                             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
                         </svg>
                     </div>
-                    <h5 class="text-dark mb-3">Life Insurance</h5>
-                    <p class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur. Orci arcu nish</p>
-                    <a href="#" class="read-more d-flex align-items-center">
+                    <h5 class="text-dark mb-3">
+                        {{ service.title}}
+                    </h5>
+                    <p class="text-muted mb-3">
+                        {{ service.get_limit_summary }}
+                    </p>
+                    <a href="{% url 'service-details' service.slug %}" class="read-more d-flex align-items-center">
                         Read More
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2"
                              viewBox="0 0 16 16">
@@ -260,64 +236,8 @@
                     </a>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card p-4 h-100">
-                    <div class="icon-box mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
-                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM4.5 7.5a.5.5 0 0 1 0 1H5v.5a.5.5 0 0 1-1 0v-.5h-.5a.5.5 0 0 1 0-1H4v-.5a.5.5 0 0 1 1 0v.5h.5zm4 0a.5.5 0 0 1 0 1H10v.5a.5.5 0 0 1-1 0v-.5h-.5a.5.5 0 0 1 0-1H9v-.5a.5.5 0 0 1 1 0v.5h.5z"/>
-                        </svg>
-                    </div>
-                    <h5 class="text-dark mb-3">Medical Insurance</h5>
-                    <p class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur. Orci arcu nish</p>
-                    <a href="#" class="read-more d-flex align-items-center">
-                        Read More
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2"
-                             viewBox="0 0 16 16">
-                            <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card p-4 h-100">
-                    <div class="icon-box mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
-                            <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276z"/>
-                            <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848Z"/>
-                        </svg>
-                    </div>
-                    <h5 class="text-dark mb-3">Car Insurance</h5>
-                    <p class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur. Orci arcu nish</p>
-                    <a href="#" class="read-more d-flex align-items-center">
-                        Read More
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2"
-                             viewBox="0 0 16 16">
-                            <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="service-card p-4 h-100">
-                    <div class="icon-box mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
-                            <path d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm0 5a1.5 1.5 0 0 1 1.5 1.5A3.5 3.5 0 0 1 12 10a.5.5 0 0 1-1 0 2.5 2.5 0 0 0-2.5-2.5A.5.5 0 0 1 8 7c0-.28.22-.5.5-.5z"/>
-                        </svg>
-                    </div>
-                    <h5 class="text-dark mb-3">Travel Insurance</h5>
-                    <p class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur. Orci arcu nish</p>
-                    <a href="#" class="read-more d-flex align-items-center">
-                        Read More
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2"
-                             viewBox="0 0 16 16">
-                            <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+            {% endfor %}
+        
         </div>
 
         <!-- Click Here Text -->
@@ -513,50 +433,30 @@
         </div>
 
         <div class="row g-4">
-            <!-- Card 1 -->
+           {% for blog in blogData %}
             <div class="col-lg-4">
                 <div class="news-card">
-                    <img src="/api/placeholder/400/320" alt="Life Insurance" class="news-image">
-                    <span class="category-badge">Life Insurance</span>
-                    <h3 class="h4 mb-3">Income on Maturity of the Money Back Plan</h3>
-                    <p class="text-secondary mb-4">Lorem ipsum dolor sit amet consectetur. Orci arcu nibh imperdiet
-                        dictum volutpat purus lectus urna volutpat. Nisi faucibus nec scelerisque.</p>
+                    {% if blog.image %}
+                    <img src="{{blog.image.url}}" alt="{{blog.title}}" class="news-image">
+                    {% endif %}
+                    <span class="category-badge">
+                        {{ blog.category.name}}
+                    </span>
+                    <h3 class="h4 mb-3">
+                        {{ blog.title}}
+                    </h3>
+                    <p class="text-secondary mb-4">
+                        {{ blog.get_limit_summary}}
+                    </p>
                     <a href="#" class="read-more">
                         Read More
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
+            {% endfor %}
 
-            <!-- Card 2 -->
-            <div class="col-lg-4">
-                <div class="news-card">
-                    <img src="/api/placeholder/400/320" alt="Medical Insurance" class="news-image">
-                    <span class="category-badge">Medical Insurance</span>
-                    <h3 class="h4 mb-3">Bonus Amounts Help Increase Payout.</h3>
-                    <p class="text-secondary mb-4">Lorem ipsum dolor sit amet consectetur. Orci arcu nibh imperdiet
-                        dictum volutpat purus lectus urna volutpat. Nisi faucibus nec scelerisque.</p>
-                    <a href="#" class="read-more">
-                        Read More
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-lg-4">
-                <div class="news-card">
-                    <img src="/api/placeholder/400/320" alt="Car Insurance" class="news-image">
-                    <span class="category-badge">Car Insurance</span>
-                    <h3 class="h4 mb-3">Beginner's guide to life insurance in USA</h3>
-                    <p class="text-secondary mb-4">Lorem ipsum dolor sit amet consectetur. Orci arcu nibh imperdiet
-                        dictum volutpat purus lectus urna volutpat. Nisi faucibus nec scelerisque.</p>
-                    <a href="#" class="read-more">
-                        Read More
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
+           
         </div>
     </div>
 </section>

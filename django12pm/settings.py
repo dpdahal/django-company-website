@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website.apps.WebsiteConfig',
     'bootstrap5',
+    'ckeditor',
+    'crispy_forms',
+    'crispy_bootstrap4',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -152,3 +156,16 @@ JAZZMIN_SETTINGS = {
     ],
     
 }
+
+
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 600,
+    },
+}
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

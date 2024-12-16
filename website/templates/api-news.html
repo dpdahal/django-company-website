@@ -1,0 +1,37 @@
+
+{% extends 'layouts/master.html' %}
+
+{% block content %}
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-12 mb-4">
+               <h1>API News</h1>
+            </div>
+        </div>
+        <div class="row">
+            {% for blog in newsData %}
+            <div class="col-md-4">
+                <div class="card">
+                    {% if blog.urlToImage %}
+                    <img src="{{blog.urlToImage}}" style="height: 200px;" 
+                    class="card-img-top" alt="{{blog.title}}">
+                    {% endif %}
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        {{ blog.title }}
+                      </h5>
+                      <p class="card-text">
+                      </p>
+                    
+                      <a href="" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+
+
